@@ -10,7 +10,7 @@ from models import storage
 @app_views.route("/amenities", methods=['GET', 'POST'], strict_slashes=False)
 @app_views.route("/amenities/<amenity_id>", methods=['GET', 'PUT', 'DELETE'],
                  strict_slashes=False,)
-def amenities_func(amenity_id=None):
+def amenitys(amenity_id=None):
     if request.method == 'GET':
         if amenity_id is None:
             return jsonify(
